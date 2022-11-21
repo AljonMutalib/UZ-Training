@@ -40,24 +40,42 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Container(
                 margin: const EdgeInsets.only(top: 50, left: 20),
-                color: Colors.red,
+                //color: Colors.red,
                 width: 60,
                 height: 60,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Image.network(
+                    'https://upload.wikimedia.org/wikipedia/commons/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg',
+                    fit: BoxFit.fill,
+                  ),
+                ),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                     margin: const EdgeInsets.only(top: 50, left: 20),
-                    color: Colors.blue,
+                    //color: Colors.blue,
                     width: 160,
-                    height: 12,
+                    height: 15,
+                    child: const Text(
+                      'Elon Musk',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
                   ),
                   Container(
                     margin: const EdgeInsets.only(top: 10, left: 20),
-                    color: Colors.green,
+                    //color: Colors.green,
                     width: 100,
                     height: 12,
+                    child: Text(
+                      'CEO',
+                      style: TextStyle(fontSize: 14),
+                    ),
                   ),
                 ],
               ),

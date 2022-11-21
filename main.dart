@@ -1,32 +1,29 @@
-// Copyright (c) 2019, the Dart project authors.  Please see the AUTHORS file
-// for details. All rights reserved. Use of this source code is governed by a
-// BSD-style license that can be found in the LICENSE file.
-
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      debugShowCheckedModeBanner: false,
+      home: const MyHomePage(title: 'UZ App'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  final String title;
+  const MyHomePage({super.key, required this.title});
 
-  const MyHomePage({
-    Key? key,
-    required this.title,
-  }) : super(key: key);
+  final String title;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -66,6 +63,83 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ],
           ),
+          const Padding(
+            padding: EdgeInsets.only(left: 20, right: 20, top: 10),
+            child: Divider(
+              thickness: 1,
+            ),
+          ),
+          for (int i = 0; i < 4; i++)
+            Row(
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(top: 10, left: 20),
+                  color: Colors.red,
+                  width: 60,
+                  height: 30,
+                ),
+                Container(
+                  margin: const EdgeInsets.only(top: 10, left: 20, right: 100),
+                  color: Colors.red,
+                  width: 120,
+                  height: 30,
+                ),
+                Container(
+                  margin: const EdgeInsets.only(top: 10, left: 20),
+                  color: Colors.red,
+                  width: 20,
+                  height: 30,
+                ),
+              ],
+            ),
+          const Padding(
+            padding: EdgeInsets.only(left: 20, right: 20, top: 10),
+            child: Divider(
+              thickness: 1,
+            ),
+          ),
+          for (int i = 0; i < 3; i++)
+            Row(
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(top: 10, left: 20),
+                  color: Colors.red,
+                  width: 60,
+                  height: 30,
+                ),
+                Container(
+                  margin: const EdgeInsets.only(top: 10, left: 20, right: 100),
+                  color: Colors.red,
+                  width: 120,
+                  height: 30,
+                ),
+                Container(
+                  margin: const EdgeInsets.only(top: 10, left: 20),
+                  color: Colors.red,
+                  width: 20,
+                  height: 30,
+                ),
+              ],
+            ),
+          Container(
+            margin:
+                const EdgeInsets.only(top: 30, bottom: 10, right: 20, left: 20),
+            color: Colors.red,
+            width: 800,
+            height: 60,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              for (int i = 0; i < 4; i++)
+                Container(
+                  margin: const EdgeInsets.only(top: 50),
+                  color: Colors.red,
+                  width: 60,
+                  height: 60,
+                ),
+            ],
+          )
         ],
       ),
     );

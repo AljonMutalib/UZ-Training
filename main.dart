@@ -92,22 +92,26 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Container(
                   margin: const EdgeInsets.only(top: 10, left: 20),
-                  color: Colors.red,
-                  width: 60,
-                  height: 30,
+                  color: Colors.black12,
+                  width: 40,
+                  height: 40,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: const Icon(Icons.heart_broken),
+                  ),
                 ),
                 Container(
-                  margin: const EdgeInsets.only(top: 10, left: 20, right: 100),
-                  color: Colors.red,
+                  margin: const EdgeInsets.only(top: 10, left: 20, right: 120),
+                  //color: Colors.red,
                   width: 120,
                   height: 30,
+                  child: const Text('Personal Data'),
                 ),
                 Container(
-                  margin: const EdgeInsets.only(top: 10, left: 20),
-                  color: Colors.red,
-                  width: 20,
-                  height: 30,
-                ),
+                    margin: const EdgeInsets.only(top: 10, left: 20),
+                    width: 20,
+                    height: 30,
+                    child: Icon(Icons.arrow_right)),
               ],
             ),
           const Padding(

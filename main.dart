@@ -1,169 +1,86 @@
-import 'package:flutter/material.dart';
+int age = 18;
+double price = 10.5;
 
-void main() {
-  runApp(const MyApp());
-}
+String name = 'Aljon';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+num numbers = 10;
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      debugShowCheckedModeBanner: false,
-      home: const MyHomePage(title: 'UZ App'),
-    );
+bool isTrue = true;
+
+List<int> intList = [1,2,3,4,5];
+
+List<String> stringList = ['Aljon','Mutalib'];
+
+Map<String, int> peopleAges = {
+  "Joshua": 24,
+  "Josh": 25,
+  "Ace": 26,
+};
+
+
+void main(){
+  
+  print('Map: $peopleAges');
+  
+  int grade = 76;
+  
+  if(grade >= 75){
+    print('Passed');
+  }else{
+    print('Failed');
   }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Container(
-                margin: const EdgeInsets.only(top: 50, left: 20),
-                //color: Colors.red,
-                width: 60,
-                height: 60,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: Image.network(
-                    'https://upload.wikimedia.org/wikipedia/commons/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg',
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    margin: const EdgeInsets.only(top: 50, left: 20),
-                    //color: Colors.blue,
-                    width: 160,
-                    height: 15,
-                    child: const Text(
-                      'Elon Musk',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    margin: const EdgeInsets.only(top: 10, left: 20),
-                    //color: Colors.green,
-                    width: 100,
-                    height: 12,
-                    child: Text(
-                      'CEO',
-                      style: TextStyle(fontSize: 14),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          const Padding(
-            padding: EdgeInsets.only(left: 20, right: 20, top: 10),
-            child: Divider(
-              thickness: 1,
-            ),
-          ),
-          for (int i = 0; i < 4; i++)
-            Row(
-              children: [
-                Container(
-                  margin: const EdgeInsets.only(top: 10, left: 20),
-                  color: Colors.black12,
-                  width: 40,
-                  height: 40,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: const Icon(Icons.heart_broken),
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.only(top: 10, left: 20, right: 120),
-                  //color: Colors.red,
-                  width: 120,
-                  height: 30,
-                  child: const Text('Personal Data'),
-                ),
-                Container(
-                    margin: const EdgeInsets.only(top: 10, left: 20),
-                    width: 20,
-                    height: 30,
-                    child: Icon(Icons.arrow_right)),
-              ],
-            ),
-          const Padding(
-            padding: EdgeInsets.only(left: 20, right: 20, top: 10),
-            child: Divider(
-              thickness: 1,
-            ),
-          ),
-          for (int i = 0; i < 3; i++)
-            Row(
-              children: [
-                Container(
-                  margin: const EdgeInsets.only(top: 10, left: 20),
-                  color: Colors.red,
-                  width: 60,
-                  height: 30,
-                ),
-                Container(
-                  margin: const EdgeInsets.only(top: 10, left: 20, right: 100),
-                  color: Colors.red,
-                  width: 120,
-                  height: 30,
-                ),
-                Container(
-                  margin: const EdgeInsets.only(top: 10, left: 20),
-                  color: Colors.red,
-                  width: 20,
-                  height: 30,
-                ),
-              ],
-            ),
-          Container(
-            margin:
-                const EdgeInsets.only(top: 30, bottom: 10, right: 20, left: 20),
-            color: Colors.red,
-            width: 800,
-            height: 60,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              for (int i = 0; i < 4; i++)
-                Container(
-                  margin: const EdgeInsets.only(top: 50),
-                  color: Colors.red,
-                  width: 60,
-                  height: 60,
-                ),
-            ],
-          )
-        ],
-      ),
-    );
+  
+  if(grade >= 75 && grade <= 79){
+    print('Good');
+  }else if(grade>= 80 && grade <= 89){
+    print('Average');
+  }else if(grade >= 90 && grade <= 100){
+    print('Excellent');
+  }else{
+    print('Failed');
+  }
+  
+  if(grade == 75 || grade > 75){
+    print('Using OR Operator : Passed');
+  }else{
+    print('Using OR Operator : Failed');
+  }
+  
+  //Foor Loop
+  for(int x= 0; x < 5; x++){
+    print('Using Foor Loop : $x');
+  }
+  
+  //ForEach
+  var counterx = ['Aljon','Mutalib','Test'];
+  for(var ctx in counterx){
+	  print('Using ForEach : $ctx');
+  }
+  
+  //while Loop
+  var ctr = 1;
+  var maxCtr = 10;
+  while(ctr<=maxCtr){
+    print('Using While Loop: $ctr');
+    ctr = ctr+1;
+  }
+  
+  // 1 out of 5 is the highest
+  int gpa = 1;
+  switch (gpa) {
+    case 4:
+      print("Home Page");
+      break;
+    case 3:
+      print("News Page");
+      break;
+    case 2:
+      print("Profile Page");
+      break;
+    case 1:
+      print("Login Page");
+      break;
+    default:
+      print("Something went wrong");
   }
 }

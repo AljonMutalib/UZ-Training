@@ -83,4 +83,16 @@ void main(){
     default:
       print("Something went wrong");
   }
+  testPrint(83);
+}
+testPrint(int n1){
+  if(n1 >= 75 && n1 <= 79){
+    print('Good');
+  }else if(n1>= 80 && n1 <= 89){
+    print('Average');
+  }else if(n1 >= 90 && n1 <= 100){
+    print('Excellent');
+  }else{
+    print('Failed');
+  }
 }

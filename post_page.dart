@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'post_item.dart';
-
 import 'data/connect.dart';
-import 'model/course_model.dart';
+import 'model/post_model.dart';
 
 class PostPage extends StatefulWidget {
   const PostPage({super.key, required this.title});
@@ -14,14 +13,6 @@ class PostPage extends StatefulWidget {
 }
 
 class _PostPageState extends State<PostPage> {
-  @override
-  void initState() {
-    super.initState();
-    getPost();
-  }
-
-  List<PostModel> post = [];
-
   Future<List<PostModel>> getPost() async {
     List<PostModel> post = [];
     var db = MySql();
